@@ -77,8 +77,8 @@ def print_cards(songs, win_songs, user_pref, card_cnt):
 
     body = base_template.render(**{
         'cards_data': cards_body,
-        'img_path': '{}/bingo2.png'.format(template_dir),
-        'back_img_path': '{}/bingo3.png'.format(template_dir)
+        'img_path': '{}{}'.format(input_dir, config.example_card),
+        'back_img_path': '{}{}'.format(input_dir, config.example_back_card)
     })
 
     logging.info('Собираем файл, подождите...')
