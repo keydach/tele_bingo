@@ -1,0 +1,6 @@
+*.git*
+.idea
+.dockerignore
+venv
+.venv
+[Dd]ocker*

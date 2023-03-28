@@ -1,0 +1,6 @@
+aiogram
+pdfkit
+jinja2
+telethon
+python-dotenv
+pydantic

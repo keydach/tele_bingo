@@ -1,0 +1,6 @@
+.idea
+*.py[cod]
+venv
+source
+*.env
+*.session
