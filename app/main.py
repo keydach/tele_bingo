@@ -23,7 +23,7 @@ t_client = TelegramClient(
     api_id=config.api_id.get_secret_value(),
     api_hash=config.api_hash.get_secret_value()
 )
-input_dir = '{}/{}'.format(pathlib.Path(__file__).parent.resolve(), config.source_dir)
+input_dir = '{}{}'.format(pathlib.Path(__file__).parent.resolve(), config.source_dir)
 
 
 @dp.message_handler(state='*', commands=['start'])

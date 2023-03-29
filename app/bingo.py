@@ -9,7 +9,7 @@ from datetime import datetime
 from settings import config
 
 
-input_dir = '{}/{}'.format(pathlib.Path(__file__).parent.resolve(), config.source_dir)
+input_dir = '{}{}'.format(pathlib.Path(__file__).parent.resolve(), config.source_dir)
 template_dir = '{}/template'.format(pathlib.Path(__file__).parent.resolve())
 environment = Environment(loader=FileSystemLoader(template_dir))
 

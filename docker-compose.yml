@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  bingo:
+    build: app/
+    volumes:
+      - ./app:/app
+      - ./source:/source
+
+    restart: always
