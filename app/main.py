@@ -148,7 +148,7 @@ async def back_background_handler(message):
     state = dp.current_state(user=message.from_user.id)
     await state.set_state(States.all()[4])
     await bot.send_message(message.from_user.id,
-                           text='Введите количество карточек от 1 до {}'.format(config.max_card_cnt))
+                           text='Введите количество карточек от 2 до {}'.format(config.max_card_cnt))
 
 
 @dp.message_handler(state=States.STATE_4)
@@ -158,7 +158,7 @@ async def print_handler(message):
     except ValueError:
         await bot.send_message(message.from_user.id, text='{}\nЭто не похоже на число'.format(message.text))
     else:
-        if 0 < cnt_card <= config.max_card_cnt:
+        if 2 <= cnt_card <= config.max_card_cnt:
             await bot.send_message(message.from_user.id, text='Дождитесь формирования файла... Одну-две минутки')
 
             state = dp.current_state(user=message.from_user.id)
@@ -175,7 +175,7 @@ async def print_handler(message):
 
             await bot.send_message(message.from_user.id, text='Приятно было с вами поработать')
         else:
-            await bot.send_message(message.from_user.id, text='Нет, давайте от 1 до {}'.format(config.max_card_cnt))
+            await bot.send_message(message.from_user.id, text='Нет, давайте от 2 до {}'.format(config.max_card_cnt))
 
 
 if __name__ == '__main__':
