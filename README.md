@@ -6,7 +6,7 @@ telegram бот для генерации карточек музыкально�
 1. A Linux host
 2. Docker: 18+
 3. Docker-Compose: 1.24+
-4. The deployment machine have access to the Internet, so the hosts can communicate with each other;
+4. The deployment machine have access to the Internet
 
 ### Деплой
 
